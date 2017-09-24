@@ -4,22 +4,27 @@ class Oscillator {
   constructor(context) {
     this.context = context;
     this.frequency = 440;
-    this.type = 'sine';
+    this.type = 'sawtooth';
     this.playing = false;
+    //setup analyser to get audio data 
+    this.analyser = context.createAnalyser();
+    this.analyser.fftSize = 2048;
+    var bufferLength = this.analyser.frequencyBinCount;
+    this.audioDataBuffer = new Uint8Array(bufferLength); 
+    // setup other audio nodes
+    this.gainNode = this.context.createGain();
+    this.gainNode.connect(this.analyser);
+    this.analyser.connect(context.destination);
   }
   
-  init_() {
-    this.oscillator = this.context.createOscillator();
-    this.oscillator.frequency.value = this.frequency;
-    this.gainNode = this.context.createGain();
-    this.oscillator.connect(this.gainNode);
-    this.gainNode.connect(this.context.destination);
-  }
-
   play(value) {
-    // once you stop an oscillator, you can't start it again. Hence we create a 
-    // new oscillator each time the oscillator is played.
-    this.init_();
+    // we need to create a new oscillator every time as you can't
+    // start an oscillator once it's been stopped
+    this.oscillator = this.context.createOscillator();
+    this.oscillator.type = this.type;
+    this.oscillator.frequency.value = this.frequency;
+    this.oscillator.connect(this.gainNode);
+
     this.gainNode.gain.setValueAtTime(0.5, this.context.currentTime);
     this.oscillator.start();
     this.playing = true;
@@ -48,6 +53,12 @@ class Oscillator {
     if (this.oscillator) {
       this.oscillator.frequency.value = frequency;
     }
+  }
+
+  /** return a snapshot of the audio data as an Uint8Array - used for visualisation**/
+  getAudioDataBuffer(){
+    this.analyser.getByteTimeDomainData(this.audioDataBuffer);
+    return this.audioDataBuffer;
   }
 
 }  

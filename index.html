@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  
-  <div class="flex-container-column main">
-    
+
+  <div id="main-container" class="flex-container-column">
+
     <div class="flex-container-row text">
       <div class="item">
         <h1>Lorem Ipsum passage</h1>
@@ -37,12 +37,19 @@
       </div>
     </div>
 
+    <div id="oscilloscope-container">
+    <!-- width of canvas is set dynamically-->
+      <canvas id="oscilloscope-canvas" height="68" width="500">
+      </canvas>
+    </div>
+
     <!-- keyboard visualising relationship between frequencies and notes -->
     <div id="keyboard" class="flex-container-row">
     </div>
   </div>
 
   <script src="./scripts/oscillator.js"></script>
+  <script src="./scripts/oscilloscope.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
