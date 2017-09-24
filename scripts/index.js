@@ -23,10 +23,18 @@ playButtons.forEach(function(playButton) {
 //FREQUENCY CONTROLS//////
 var frequencySlider = document.querySelector('#frequency-slider');
 var frequencyValue = document.querySelector('#frequency-value');
-frequencySlider.addEventListener('input', function() {
+// update the frequency in the UI and the oscillator, 
+// rounding it to the nearest integer.
+function updateFrequency(frequency) {
+  frequencySlider.value = frequency;
+  frequencySlider.setAttribute("value", frequencySlider.value);
   frequencyValue.innerHTML = frequencySlider.value;
   oscillator.setFrequency(frequencySlider.value);
+}
+frequencySlider.addEventListener('input', function() {
+  updateFrequency(frequencySlider.value);
 })
+
 
 //OSCILLOSCOPE/////////
 var canvasContainer = document.querySelector('#oscilloscope-container');
@@ -35,6 +43,22 @@ window.onresize = function(event) {
   oscilloscope.updateWidth();
 };
 
+
+//KEYBOARD/////////////
+var keyboard = new QwertyHancock({
+  id: 'keyboard',
+  width: 1100,
+  height: 68,
+  octaves: 9,
+  startNote: 'A0'
+});
+var noteValue = document.querySelector('#note-value');
+keyboard.keyDown = function (note, frequency) {
+  // QwertyHancock uses equal temperament with decimal precision, 
+  // we round to nearest integer below.
+  updateFrequency(frequency);
+  noteValue.innerHTML = note;
+};
 
 
 

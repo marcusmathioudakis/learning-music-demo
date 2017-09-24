@@ -38,18 +38,26 @@
     </div>
 
     <div id="oscilloscope-container">
-    <!-- width of canvas is set dynamically-->
+      <!-- width of canvas is set dynamically-->
       <canvas id="oscilloscope-canvas" height="68" width="500">
       </canvas>
     </div>
 
     <!-- keyboard visualising relationship between frequencies and notes -->
-    <div id="keyboard" class="flex-container-row">
+    <div id="keyboard-row" class="flex-container-row">
+      <div class="item label">
+        Note: <span id="note-value">A0</span>
+      </div>
+      <div class="item" id="keyboard-container">
+        <div id="keyboard">
+        </div>
+      </div>
     </div>
   </div>
 
   <script src="./scripts/oscillator.js"></script>
   <script src="./scripts/oscilloscope.js"></script>
+  <script src="scripts/qwerty-hancock.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
