@@ -1,0 +1,133 @@
+/**Custom Fonts**/
+@font-face {
+  font-family: FuturaTEEMedRegular;
+  src: url(./fonts/FuturaTEEMedRegular.ttf);
+}
+
+@font-face {
+  font-family: FuturaTEERegular;
+  src: url(./fonts/FuturaTEERegular.ttf);
+}
+/**End Custom Fonts**/
+
+html {
+  font-family: "FuturaTEEMedRegular",Helvetica,Arial,sans-serif;  
+}
+
+body {
+  color: #ffffff;
+  background-color: #666;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: "FuturaTEERegular";
+  font-weight: normal;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.main.flex-container-column {
+  max-width: 1300px;
+  margin: auto;
+  padding: 100px;
+}
+
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1px 0px;
+}
+
+.controls {
+  padding: 12px;
+  background-color: #4d4d4d;
+  line-height: 1.5;
+}
+
+.item-grow {
+  flex-grow: 1;
+}
+
+.slider {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;   
+  background: #666;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%; 
+  background: #FFFFFF;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.label {
+  padding: 10px;
+  width: 142px;
+  font-size: 16px;
+}
+
+.text .item{
+  max-width: 500px;
+}
+
+.button {
+  height: 56px;
+  width: 56px;
+  background: #ffffff;
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.button .icon{
+  background-size: 20px 24px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 29px;
+  position: absolute;
+}
+
+.button .icon-play {
+  background-image: url(./images/icons/play.svg);
+}
+.button .icon-pause {
+  background-image: url(./images/icons/pause.svg);
+}
+
+/* Small Screens */
+@media all and (max-width: 600px) {
+  .label { width: 92px; }
+  .main.flex-container-column { padding: 20px; }
+  h1 { font-size: 30px; }
+  h3 { font-size: 18px; }
+}
+/* End Small Screens */
