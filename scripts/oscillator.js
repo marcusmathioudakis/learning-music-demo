@@ -4,7 +4,7 @@ class Oscillator {
   constructor(context) {
     this.context = context;
     this.frequency = 440;
-    this.type = 'sawtooth';
+    this.type = 'sine';
     this.playing = false;
     //setup analyser to get audio data 
     this.analyser = context.createAnalyser();
@@ -42,6 +42,7 @@ class Oscillator {
 
   setType(type) {
     this.oscillator.type = type;
+    this.type = type;
   }
 
   getFrequency() {

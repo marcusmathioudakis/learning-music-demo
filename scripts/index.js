@@ -20,6 +20,18 @@ playButtons.forEach(function(playButton) {
   })
 })
 
+//WAVEFORM CONTROLS//////
+var waveButtons = document.querySelectorAll('.button.wave');
+waveButtons.forEach(function(waveButton) {
+  waveButton.addEventListener('click', function() {
+    var active = document.querySelectorAll('.button.wave.active')[0];
+    active.classList.remove('active');
+    waveButton.className += " active";
+    var type = waveButton.getAttribute("type");
+    oscillator.setType(type);
+  })
+}) 
+
 //FREQUENCY CONTROLS//////
 var frequencySlider = document.querySelector('#frequency-slider');
 var frequencyValue = document.querySelector('#frequency-value');

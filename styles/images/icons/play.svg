@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="22px" height="24px" viewBox="0 0 22 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>play</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="play" fill="#666666">
-            <polygon id="Path" points="2 0 22 12 2 24"></polygon>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><path d="M24.7,84.4l49.6-28.6c0.2-0.1,0.3-0.3,0.3-0.4s-0.1-0.3-0.3-0.4L24.7,26.3c-0.2-0.1-0.3-0.1-0.5,0   c-0.2,0.1-0.3,0.3-0.3,0.4v57.3c0,0.2,0.1,0.3,0.3,0.4c0.1,0,0.2,0.1,0.3,0.1S24.6,84.4,24.7,84.4z M25,27.6l48.1,27.8L25,83.1   V27.6z"/></g></svg>

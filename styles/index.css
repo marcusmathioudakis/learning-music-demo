@@ -54,6 +54,10 @@ h3 {
   line-height: 1.5;
 }
 
+#controls-global {
+  margin-top: 50px;
+}
+
 .item-grow {
   flex-grow: 1;
 }
@@ -108,12 +112,21 @@ h3 {
   cursor: hand;
 }
 
+.button.wave {
+  background: #ffffff;
+}
+
 .button .icon{
-  background-size: 20px 24px;
+  /*background-size: 20px 24px;*/
+  background-size: 36px 36px;
   background-position: center center;
   background-repeat: no-repeat;
   padding: 29px;
   position: absolute;
+}
+
+.button.wave.active {
+  background: #C8C8C8;
 }
 
 .button .icon-play {
@@ -121,6 +134,26 @@ h3 {
 }
 .button .icon-pause {
   background-image: url(./images/icons/pause.svg);
+}
+
+#sine-icon {
+  background-image: url(./images/icons/sine.svg);
+  background-size: 31px 37px;
+}
+
+#saw-icon {
+  background-image: url(./images/icons/saw.svg);
+  background-size: 35px 51px;
+}
+
+#square-icon {
+  background-image: url(./images/icons/square.svg);
+  background-size: 35px 51px;
+}
+
+#triangle-icon {
+  background-image: url(./images/icons/triangle.svg);
+  background-size: 35px 51px;
 }
 
 #oscilloscope-container{
@@ -142,5 +175,6 @@ h3 {
   #main-container { padding: 20px; }
   h1 { font-size: 30px; }
   h3 { font-size: 18px; }
+  #controls-global { margin-top: 0px; }
 }
 /* End Small Screens */
