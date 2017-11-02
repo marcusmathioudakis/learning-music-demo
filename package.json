@@ -2,7 +2,9 @@
   "name": "simple-synth",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://marcusmathioudakis.github.io/simple-synth",
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "qwerty-hancock": "^0.5.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -11,9 +13,11 @@
   },
   "scripts": {
     "start": "cross-env NODE_PATH=src/scripts:src/styles react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env NODE_PATH=src/scripts:src/styles react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "cross-env": "^5.1.1"
