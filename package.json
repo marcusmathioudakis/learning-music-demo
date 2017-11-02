@@ -1,0 +1,21 @@
+{
+  "name": "simple-synth",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "qwerty-hancock": "^0.5.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.16",
+    "teoria": "^2.5.0"
+  },
+  "scripts": {
+    "start": "cross-env NODE_PATH=src/scripts:src/styles react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.1"
+  }
+}

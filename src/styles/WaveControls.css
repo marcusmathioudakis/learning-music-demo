@@ -1,0 +1,23 @@
+#sine-icon {
+  background-image: url(./images/icons/sine.svg);
+  background-size: 31px 37px;
+}
+
+#sawtooth-icon {
+  background-image: url(./images/icons/sawtooth.svg);
+  background-size: 35px 51px;
+}
+
+#square-icon {
+  background-image: url(./images/icons/square.svg);
+  background-size: 35px 51px;
+}
+
+#triangle-icon {
+  background-image: url(./images/icons/triangle.svg);
+  background-size: 35px 51px;
+}
+
+.button.wave.active {
+  background: #C8C8C8;
+}

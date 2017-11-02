@@ -1,0 +1,116 @@
+/**Custom Fonts**/
+@font-face {
+  font-family: FuturaTEEMedRegular;
+  src: url(./fonts/FuturaTEEMedRegular.ttf);
+}
+
+@font-face {
+  font-family: FuturaTEERegular;
+  src: url(./fonts/FuturaTEERegular.ttf);
+}
+/**End Custom Fonts**/
+
+
+body {
+  color: #ffffff;
+  background-color: #666;
+  font-family: "FuturaTEEMedRegular",Helvetica,Arial,sans-serif;  
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: "FuturaTEERegular";
+  font-weight: normal;
+}
+
+#main-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 100px;
+}
+
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.controls {
+  padding: 12px;
+  background-color: #4d4d4d;
+  line-height: 1.5;
+}
+
+#controls-global {
+  margin-top: 50px;
+}
+
+.item-grow {
+  flex-grow: 1;
+}
+
+.label {
+  padding: 10px;
+  width: 142px;
+  font-size: 16px;
+}
+
+.text .item{
+  max-width: 500px;
+}
+
+.button {
+  height: 56px;
+  width: 56px;
+  background: #ffffff;
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.button .icon{
+  background-size: 36px 36px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 29px;
+  position: absolute;
+}
+
+.button .icon-play {
+  background-image: url(./images/icons/play.svg);
+}
+.button .icon-pause {
+  background-image: url(./images/icons/pause.svg);
+}
+
+#oscilloscope-container{
+  margin-bottom: -6px;
+}
+
+#keyboard-row {
+  padding: 18px 12px 18px 12px;
+  background-color: #4d4d4d;
+}
+
+#keyboard-container {
+  overflow: hidden;
+}
+
+/* Small Screens */
+@media all and (max-width: 600px) {
+  .label { width: 92px; }
+  #main-container { padding: 20px; }
+  h1 { font-size: 30px; }
+  h3 { font-size: 18px; }
+  #controls-global { margin-top: 0px; }
+}
+/* End Small Screens */
