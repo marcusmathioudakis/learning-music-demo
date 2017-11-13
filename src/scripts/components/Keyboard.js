@@ -1,5 +1,7 @@
 import React from "react";
 import QwertyHancock from "qwerty-hancock";
+import 'Keyboard.css';
+
 /**
 	this class uses the Qwerty-Hancock keyboard vs implementing an actual
 	React based keyboard from scratch.
@@ -22,11 +24,11 @@ export default class Keyboard extends React.Component {
 
 	render() {
 		return (
-			<div id="keyboard-row" className="flex-container-row">
+			<div className="flex-container-row Keyboard">
 				<div className="item label">
 					Note: <span id="note-value">{this.props.note}</span>
 				</div>
-				<div className="item" id="keyboard-container">
+				<div className="item container">
 					<div id="keyboard" />
 				</div>
 			</div>

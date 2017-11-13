@@ -42,14 +42,18 @@ export default class Synth extends React.Component {
 	}
 
 	handleNoteChange(note) {
-		const noteObject = Teoria.note(note);
-		const frequency = Math.round(noteObject.fq());
+		try {
+			const noteObject = Teoria.note(note);
+			const frequency = Math.round(noteObject.fq());
 
-		this.oscillator.setFrequency(frequency);
-		this.setState({
-			frequency: frequency,
-			note: note
-		});
+			this.oscillator.setFrequency(frequency);
+			this.setState({
+				frequency: frequency,
+				note: note
+			});
+		} catch(err) {
+			
+		}
 	}
 
 	render() {

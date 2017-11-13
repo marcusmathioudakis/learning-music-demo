@@ -25,15 +25,15 @@ export default class Oscillator {
     this.oscillator.type = this.type;
     this.oscillator.frequency.value = this.frequency;
     this.oscillator.connect(this.gainNode);
-
-    this.gainNode.gain.setValueAtTime(0.5, this.context.currentTime);
+    // we do this to avoid a click in the audio
+    this.gainNode.gain.exponentialRampToValueAtTime(0.5, this.context.currentTime + 0.1);
     this.oscillator.start();
     this.playing = true;
   }
   
   stop() {
-    this.gainNode.gain.exponentialRampToValueAtTime(0.001, this.context.currentTime + 1);
-    this.oscillator.stop(this.context.currentTime + 1);
+    this.gainNode.gain.exponentialRampToValueAtTime(0.001, this.context.currentTime + 0.1);
+    this.oscillator.stop(this.context.currentTime + 0.1);
     this.playing = false;
   }
 

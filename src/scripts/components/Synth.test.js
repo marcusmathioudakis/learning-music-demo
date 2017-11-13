@@ -10,4 +10,13 @@ it('shallow render without crashing', () => {
 });
 
 
+it('tests handling an invalid note change doesnt throw an exception', () => {
+  const div = document.createElement('div');
+  const wrapper = shallow(<Synth />);
+  wrapper.instance().handleNoteChange("x");
+});
+
+
+
+
 
