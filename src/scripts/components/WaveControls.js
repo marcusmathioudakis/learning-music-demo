@@ -15,7 +15,7 @@ export default class WaveControls extends React.Component {
 			<div
 				key={type}
 				className={
-					"button wave " + (type == this.state.type ? "active" : "")
+					"button wave " + (type === this.state.type ? "active" : "")
 				}
 				id={type + "Button"}
 				type={type}
@@ -28,6 +28,6 @@ export default class WaveControls extends React.Component {
 			</div>
 		));
 
-		return <div className="flex-container-row">{waveButtons}</div>;
+		return <div className="WaveControls flex-container-row">{waveButtons}</div>;
 	}
 }

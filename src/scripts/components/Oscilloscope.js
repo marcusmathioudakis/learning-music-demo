@@ -33,7 +33,7 @@ export default class Oscilloscope extends React.Component {
 		// https://developer.mozilla.org/en-US/docs/Web/API
 		// /Web_Audio_API/Visualizations_with_Web_Audio_API
 		var draw = function() {
-			var drawVisual = requestAnimationFrame(draw);
+			requestAnimationFrame(draw);
 			//get audio data to display
 			var dataArray = oscillator.getAudioDataBuffer();
 			//setup canvas

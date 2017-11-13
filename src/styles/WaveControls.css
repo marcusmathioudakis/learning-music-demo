@@ -18,6 +18,10 @@
   background-size: 35px 51px;
 }
 
+.WaveControls .icon {
+	margin-left: -3px;	
+}
+
 .button.wave.active {
   background: #C8C8C8;
 }

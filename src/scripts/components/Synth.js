@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import Teoria from "teoria";
 import Oscillator from "oscillator.js";
 import Play from "components/Play"
@@ -55,7 +54,7 @@ export default class Synth extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="Synth">
 				<div id="controls-global" className="flex-container-row">
 					<Play
 						onClickOn={() => {

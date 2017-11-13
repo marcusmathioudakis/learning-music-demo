@@ -23,14 +23,16 @@ export default class Play extends React.Component {
 			);
 		} else {
 			return (
-				<div
-					className="button playButton"
-					onClick={() => {
-						this.props.onClickOn();
-						this.setState({ on: true });
-					}}
-				>
-					<i className="icon-play icon" id="play-main" />
+				<div className="flex-container-column">
+					<div
+						className="button playButton"
+						onClick={() => {
+							this.props.onClickOn();
+							this.setState({ on: true });
+						}}
+					>
+						<i className="icon-play icon" id="play-main" />
+					</div>
 				</div>
 			);
 		}
