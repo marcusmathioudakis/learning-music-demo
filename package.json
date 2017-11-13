@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://marcusmathioudakis.github.io/simple-synth",
   "dependencies": {
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
     "gh-pages": "^1.0.0",
     "qwerty-hancock": "^0.5.1",
     "react": "^16.0.0",
@@ -14,12 +16,14 @@
   "scripts": {
     "start": "cross-env NODE_PATH=src/scripts:src/styles react-scripts start",
     "build": "cross-env NODE_PATH=src/scripts:src/styles react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "cross-env NODE_PATH=src/scripts:src/styles react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "cross-env": "^5.1.1"
+    "react-test-renderer": "^16.1.1",
+    "cross-env": "^5.1.1",
+    "web-audio-mock-api": "^1.0.0"
   }
 }
