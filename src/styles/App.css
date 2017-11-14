@@ -10,11 +10,19 @@
 }
 /**End Custom Fonts**/
 
+/** color scheme defined as css properties **/
+:root {
+  --darker: #4d4d4d;
+  --dark: #666;
+  --light: #c8c8c8;
+  --lighter: #ffffff;
+}
+/** End color scheme defined as css properties **/
 
 body {
+  background-color: var(--dark);
   color: #ffffff;
-  background-color: #666;
-  font-family: "FuturaTEEMedRegular",Helvetica,Arial,sans-serif;  
+  font-family: "FuturaTEEMedRegular", Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -47,7 +55,7 @@ h3 {
 
 .controls {
   padding: 12px;
-  background-color: #4d4d4d;
+  background-color: var(--darker);
   line-height: 1.5;
 }
 
@@ -65,19 +73,19 @@ h3 {
   font-size: 16px;
 }
 
-.text .item{
+.text .item {
   max-width: 500px;
 }
 
 .button {
   height: 56px;
   width: 56px;
-  background: #ffffff;
-  cursor: pointer; 
+  background: var(--lighter);
+  cursor: pointer;
   cursor: hand;
 }
 
-.button .icon{
+.button .icon {
   background-size: 36px 36px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -100,20 +108,34 @@ h3 {
   min-width: 261px;
 }
 
-#oscilloscope-container{
+/* the styles below are used to dynamically 
+set the oscilloscope canvas style in js*/
+#oscilloscope-container {
   margin-bottom: -6px;
+  --fill-color: var(--light);
+  --stroke-color: var(--darker);
 }
 
 /* Small Screens */
 @media all and (max-width: 600px) {
-  .label { width: 92px; }
-  #main-container { padding: 20px; }
-  h1 { font-size: 30px; }
-  h3 { font-size: 18px; }
-  #controls-global { margin-top: 0px; }
+  .label {
+    width: 92px;
+  }
+  #main-container {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  #controls-global {
+    margin-top: 0px;
+  }
   .button {
-  height: 52px;
-  width: 52px;
-}
+    height: 52px;
+    width: 52px;
+  }
 }
 /* End Small Screens */

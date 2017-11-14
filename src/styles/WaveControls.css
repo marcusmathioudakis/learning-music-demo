@@ -23,5 +23,5 @@
 }
 
 .button.wave.active {
-  background: #C8C8C8;
+  background: var(--light);
 }

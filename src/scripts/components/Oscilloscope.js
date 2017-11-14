@@ -16,6 +16,11 @@ export default class Oscilloscope extends React.Component {
 
 	drawOscilloscope(oscillator, canvasContainerId) {
 		const canvasContainer = document.querySelector(canvasContainerId);
+		// dynamically compute canvas style from css
+		const style = getComputedStyle(canvasContainer);
+		const fillColor = style.getPropertyValue("--fill-color");
+		const strokeColor = style.getPropertyValue("--stroke-color");
+
 		this.canvasContainer = canvasContainer;
 		this.canvas = canvasContainer.querySelectorAll("canvas")[0];
 		var canvas = this.canvas;
@@ -37,10 +42,10 @@ export default class Oscilloscope extends React.Component {
 			//get audio data to display
 			var dataArray = oscillator.getAudioDataBuffer();
 			//setup canvas
-			canvasCtx.fillStyle = "rgb(200, 200, 200)";
+			canvasCtx.fillStyle = fillColor;
 			canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 			canvasCtx.lineWidth = 2;
-			canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+			canvasCtx.strokeStyle = strokeColor;
 			canvasCtx.beginPath();
 			//plot the data
 			var bufferLength = dataArray.length;

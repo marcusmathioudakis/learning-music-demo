@@ -3,7 +3,7 @@ import Teoria from "teoria";
 import Oscillator from "oscillator.js";
 import Play from "components/Play"
 import WaveControls from "components/WaveControls"
-import OscilloscopeComponent from "components/Oscilloscope"
+import Oscilloscope from "components/Oscilloscope"
 import Keyboard from "components/Keyboard"
 import FrequencyControls from "components/FrequencyControls"
 
@@ -80,7 +80,7 @@ export default class Synth extends React.Component {
 						this.handleFrequencyChange(frequency);
 					}}
 				/>
-				<OscilloscopeComponent oscillator={this.oscillator} />
+				<Oscilloscope oscillator={this.oscillator}/>
 				<Keyboard
 					note={this.state.note}
 					onNoteChange={note => {

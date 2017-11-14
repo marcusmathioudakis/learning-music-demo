@@ -1,6 +1,6 @@
 .Keyboard.flex-container-row  {
   padding: 18px 12px 18px 12px;
-  background-color: #4d4d4d;
+  background-color: var(--darker);
 }
 
 .Keyboard .container {
