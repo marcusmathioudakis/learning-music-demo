@@ -1,9 +1,10 @@
-.Keyboard.flex-container-row  {
-  padding: 18px 12px 18px 12px;
-  background-color: var(--darker);
+.Keyboard.flex-container-row {
+	padding: 18px 12px 18px 12px;
+	background-color: var(--darker);
 }
 
 .Keyboard .container {
-  overflow: hidden;
-  max-width: 1071px;
+	overflow: hidden;
+	max-width: 1071px;
 }
+

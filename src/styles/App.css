@@ -1,38 +1,38 @@
 /**Custom Fonts**/
 @font-face {
-  font-family: FuturaTEEMedRegular;
-  src: url(./fonts/FuturaTEEMedRegular.ttf);
+  font-family: JosefinSansRegular;
+  src: url(./fonts/JosefinSans-Regular.ttf);
 }
 
 @font-face {
-  font-family: FuturaTEERegular;
-  src: url(./fonts/FuturaTEERegular.ttf);
+  font-family: LatoLight;
+  src: url(./fonts/Lato-Light.ttf);
 }
 /**End Custom Fonts**/
 
 /** color scheme defined as css properties **/
 :root {
-  --darker: #4d4d4d;
-  --dark: #666;
-  --light: #c8c8c8;
-  --lighter: #ffffff;
+  --darker: #20828D;
+  --dark: #76B0BA;
+  --light: #A2C8CC;
+  --lighter: #CCE0E1;
 }
 /** End color scheme defined as css properties **/
 
 body {
   background-color: var(--dark);
+  font-family: "LatoLight", Helvetica, Arial, sans-serif;
   color: #ffffff;
-  font-family: "FuturaTEEMedRegular", Helvetica, Arial, sans-serif;
 }
 
 h1 {
+  font-family: "JosefinSansRegular", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 45px;
 }
 
 h3 {
   font-size: 20px;
-  font-family: "FuturaTEERegular";
   font-weight: normal;
 }
 
@@ -69,7 +69,7 @@ h3 {
 
 .label {
   padding: 10px;
-  width: 142px;
+  width: 149px;
   font-size: 16px;
 }
 
@@ -113,7 +113,7 @@ set the oscilloscope canvas style in js*/
 #oscilloscope-container {
   margin-bottom: -6px;
   --fill-color: var(--light);
-  --stroke-color: var(--darker);
+  --stroke-color: black;
 }
 
 /* Small Screens */
@@ -131,7 +131,7 @@ set the oscilloscope canvas style in js*/
     font-size: 18px;
   }
   #controls-global {
-    margin-top: 0px;
+    margin-top: 20px;
   }
   .button {
     height: 52px;

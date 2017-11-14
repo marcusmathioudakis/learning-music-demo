@@ -1,6 +1,6 @@
 import React from "react";
 import QwertyHancock from "qwerty-hancock";
-import 'Keyboard.css';
+import "Keyboard.css";
 
 /**
 	this class uses the Qwerty-Hancock keyboard vs implementing an actual
@@ -13,7 +13,8 @@ export default class Keyboard extends React.Component {
 			width: 1100,
 			height: 68,
 			octaves: 9,
-			startNote: "A0"
+			startNote: "A0",
+			activeColour: "#A2C8CC"
 		});
 
 		keyboard.keyDown = function(note, frequency) {
