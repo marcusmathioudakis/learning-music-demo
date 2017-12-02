@@ -20,7 +20,7 @@ export default class Synth extends React.Component {
 		this.handleFrequencyChange = this.handleFrequencyChange.bind(this);
 		this.handleNoteChange = this.handleNoteChange.bind(this);
 
-		const context = new AudioContext();
+		const context = new (window.AudioContext || window.webkitAudioContext)();
 		this.oscillator = new Oscillator(context);
 	}
 
